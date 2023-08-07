@@ -1,10 +1,20 @@
-package java_study.chapter06.sec05;
+package java_study.chapter07.sec01;
 
 public class Account {
 
-	String name;
-	String accountName;
+	private String name;
+	private String accountName;
 	private int balance;
+
+	public Account() {
+
+	}
+
+	public Account(String n, String an, int b) {
+		name = n;
+		accountName = an;
+		balance = b;
+	}
 
 	public void deposit(int amount) { // amount : 입금액
 		balance += amount;
