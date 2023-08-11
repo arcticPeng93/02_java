@@ -23,6 +23,20 @@ public class ArrayListExample {
 		System.out.println("2: " + skill);
 		System.out.println();
 
+		// 순회
+		for (int i = 0; i < list.size(); i++) {
+			String str = list.get(i);
+			System.out.println(i + ":" + str);
+		}
+		// 삭제
+		System.out.println();
+		list.remove(2);
+		list.remove(2);
+		list.remove("iBATIS");
+		for (int i = 0; i < list.size(); i++) {
+			String str = list.get(i);
+			System.out.println(i + ":" + str);
+		}
 	}
 
 }
