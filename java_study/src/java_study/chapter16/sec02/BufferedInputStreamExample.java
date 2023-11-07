@@ -1,0 +1,32 @@
+package java_study.chapter16.sec02;
+
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
+
+public class BufferedInputStreamExample {
+	public static void main(String[] args) throws Exception {
+		long start = 0;
+		long end = 0;
+
+		try (FileInputStream fis1 = new FileInputStream("C:/temp/forest.png");) { // 15.5mb 파일
+			start = System.currentTimeMillis();
+			while (fis1.read() != -1) {
+			}
+			end = System.currentTimeMillis();
+			System.out.println("사용하지 않았을 때: " + (end - start) + "ms");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		try (FileInputStream fis1 = new FileInputStream("C:/temp/forest.png");
+				BufferedInputStream bis = new BufferedInputStream(fis1);) { // 15.5mb 파일
+			start = System.currentTimeMillis();
+			while (bis.read() != -1) {
+			}
+			end = System.currentTimeMillis();
+			System.out.println("사용했을 때: " + (end - start) + "ms");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

@@ -6,7 +6,7 @@ public class MemberTest {
 		Member m1 = new Member();
 		System.out.println(m1);
 
-		Member m2 = new Member("Kim", "1234", "김삿갓", "kim@naver.com");
+		Member m2 = new Member("hong", "1234", "홍길동", "hong@naver.com");
 		System.out.println(m2);
 		System.out.println(m2.getUserid());
 		System.out.println(m2.getName());
